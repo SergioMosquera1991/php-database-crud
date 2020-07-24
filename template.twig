@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" >
 
@@ -17,7 +17,7 @@
         <div class="row" >
             <div class="col header" >
                 <h1>Todo List</h1>
-                <form action="/add" method="post" >
+                <form action="/php-database-crud/add/" method="post" >
                 <input class="form-control" type="text" name="description" >
                 <br>
                 <button class="btn btn-primary" type="submit">Add Task</button>
@@ -35,11 +35,11 @@
                 </span>
                 <span>
                 {% if task.done %}
-                    <a href="/uncheck/{{ task.id }}" ><i class="far fa-check-square" style="color:green;" ></i></a>
+                    <a href="/php-database-crud/uncheck/{{ task.id }}" ><i class="far fa-check-square" style="color:green;" ></i></a>
                 {% else %}
-                    <a href="/check/{{ task.id }}" ><i class="far fa-square" style="color:black;" ></i></a>
+                    <a href="/php-database-crud/check/{{ task.id }}" ><i class="far fa-square" style="color:black;" ></i></a>
                 {% endif %}
-                <a href="/delete/{{ task.id }}" ><i class="fas fa-trash-alt" style="color:red;" ></i></a>
+                <a href="/php-database-crud/delete/{{ task.id }}" ><i class="fas fa-trash-alt" style="color:red;" ></i></a>
                 </span>
             </li>
             {% endfor %}
